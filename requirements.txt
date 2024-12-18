@@ -1,6 +1,4 @@
 torch
-torchvision 
-torchaudio
 numpy
 scikit-image
 xgboost
@@ -9,4 +7,3 @@ opencv-python
 scipy
 torchmetrics
 tqdm
-Django
