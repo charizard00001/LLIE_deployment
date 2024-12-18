@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Results</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Container */
+        .container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Title Styling */
+        h2 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Image Container */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between images */
+            flex-wrap: wrap; /* Wrap images on small screens */
+            margin-bottom: 20px;
+        }
+
+        .image-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-box img {
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for images */
+        .image-box img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Download Button Styling */
+        .download-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #28a745; /* Green color */
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #218838; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+
+    <div class="container">
+        <h2>Original Image vs Processed Image</h2>
+
+        <!-- Image Comparison Section -->
+        <div class="image-container">
+            <!-- Original Image -->
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img src="data:image/png;base64,{{ input_image }}" alt="Input Image">
+            </div>
+
+            <!-- Processed Image -->
+            <div class="image-box">
+                <h3>Processed Image</h3>
+                <img src="data:image/png;base64,{{ output_image }}" alt="Processed Image">
+                <!-- Download Button -->
+                <a href="data:image/png;base64,{{ output_image }}" download="processed_image.png" class="download-btn">
+                    Download Processed Image
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
