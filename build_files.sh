@@ -1,5 +1,10 @@
+#!/bin/bash
+echo "Creating virtual environment..."
+python3 -m venv venv
+source venv/bin/activate
 
-echo " BUILD START "
-python -m pip install -r requirements.txt
-python manage.py collectstatic --noinput --clear
-echo " BUILD END "
+echo "Installing dependencies..."
+pip install -r requirements.txt
+
+echo "Collecting static files..."
+python3 manage.py collectstatic --noinput
