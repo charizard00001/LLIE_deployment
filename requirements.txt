@@ -1,4 +1,6 @@
-torch==2.5.1
+torch
+torchvision 
+torchaudio
 numpy
 scikit-image
 xgboost
@@ -7,4 +9,4 @@ opencv-python
 scipy
 torchmetrics
 tqdm
-Django==5.1.4
+Django
