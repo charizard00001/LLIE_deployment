@@ -1,4 +1,4 @@
-torch
+torch==2.5.1+cpu
 numpy
 scikit-image
 xgboost
@@ -7,3 +7,4 @@ opencv-python
 scipy
 torchmetrics
 tqdm
+Django==5.1.4
